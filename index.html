@@ -2,10 +2,50 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css">
 <title>About | The Clay Pot</title>
 </head>
 
 <body>
 	
+<div class="video-container">
+	<video id="myVideo" autoplay muted>
+	  <source src="media/loading.mp4" type="video/mp4"/>
+	  Your browser does not support the video tag.
+	</video>
+</div>
+
+<script>
+var vid = document.getElementById("myVideo");
+vid.onended = function() {
+    vid.style.opacity=0;
+};
+</script>
+	
+	
+<div class="header">
+	<img src="media/header.jpg" alt="Header Image">
+	<img id="logo" src="media/logo2.svg" alt="Clay Pot Logo">
+</div>
+	
+<div class="maincontent">
+<h1>Our Story</h1>
+	<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - niêu. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from niêu is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
+	<a href="#">Discover the Clay Pot Collection</a>
+	<img src="media/chef.jpg" alt="Chef Photo">
+	<img src="media/soup.jfif" alt="Soup Photo">
+	<img src="media/dinner-table.jpg" alt="Dinner Table Photo">
+	<p>Created in 2021 as a modern Vietnamese kitchen in Upstate New York, The Clay Pot Eatery and Bar guarantees to deliver the greatest that the cuisine has to offer. Everything that lands on your table has been handcrafted and approved by our team of talented chefs. Started as a group of friends that share the same passion for Vietnamese cuisine, we are ecstatic to serve you what has been named “The Best Vietnamese Food in Upstate New York”. </p>
+	<a href="#">Where To Find Us</a>
+<h1>Our Source</h1>
+	<p>While our menu will transfer you internationally, our ingredients are sourced locally right here in the tri-state area. We have come together with small businesses and farmers to serve you the freshest ingredients possible from the garden to your table. </p>
+	<img src="media/veggie.jpg" alt="Fresh Ingredients Photo">
+<h1>Testimonials</h1>
+	<img src="media/food-pot.jpg" alt="Food Photo">
+	
+</div>
+	
+
 </body>
 </html>
