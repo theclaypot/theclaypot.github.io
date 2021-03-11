@@ -9,43 +9,147 @@
 
 <body>
 	
+	<span onclick="openNav()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
+	
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="#">About</a>
+	<div class="menulink">
+	<a href="menu.html">Menu</a>
+		<div class="small-link">
+		<a href="">Eatery Menu</a>
+		<a href="">Bar Menu</a>
+		</div>
+	</div>
+	<img id="logo-nav" src="media/logo2.svg" alt="Logo">
+</div>
+
+<script>
+/* Set the width of the side navigation to 250px */
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+	
 <div class="video-container">
 	<video id="myVideo" autoplay muted>
 	  <source src="media/loading.mp4" type="video/mp4"/>
-	  Your browser does not support the video tag.
+	  Your browser does not support the video.
 	</video>
 </div>
 
 <script>
 var vid = document.getElementById("myVideo");
-vid.onended = function() {
-    vid.style.opacity=0;
-};
+var opacity=1; 
+var intervalID=0; 
+vid.onended=fadeout; 
+	function fadeout(){ 
+		setInterval(hide, 70); 
+        } 
+    function hide(){ 
+		opacity = Number(window.getComputedStyle(vid).getPropertyValue("opacity")) 
+            if(opacity>0){ 
+				opacity=opacity-0.1; 
+				vid.style.opacity=opacity 
+            } 
+            else{ 
+                clearInterval(intervalID);  
+            } 
+        }  
 </script>
 	
 	
 <div class="header">
-	<img src="media/header.jpg" alt="Header Image">
+	<img id="header-img" src="media/header.jpg" alt="Header Image">
 	<img id="logo" src="media/logo2.svg" alt="Clay Pot Logo">
 </div>
 	
 <div class="maincontent">
-<h1>Our Story</h1>
-	<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - niêu. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from niêu is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
-	<a href="#">Discover the Clay Pot Collection</a>
-	<img src="media/chef.jpg" alt="Chef Photo">
-	<img src="media/soup.jfif" alt="Soup Photo">
-	<img src="media/dinner-table.jpg" alt="Dinner Table Photo">
-	<p>Created in 2021 as a modern Vietnamese kitchen in Upstate New York, The Clay Pot Eatery and Bar guarantees to deliver the greatest that the cuisine has to offer. Everything that lands on your table has been handcrafted and approved by our team of talented chefs. Started as a group of friends that share the same passion for Vietnamese cuisine, we are ecstatic to serve you what has been named “The Best Vietnamese Food in Upstate New York”. </p>
-	<a href="#">Where To Find Us</a>
-<h1>Our Source</h1>
-	<p>While our menu will transfer you internationally, our ingredients are sourced locally right here in the tri-state area. We have come together with small businesses and farmers to serve you the freshest ingredients possible from the garden to your table. </p>
-	<img src="media/veggie.jpg" alt="Fresh Ingredients Photo">
-<h1>Testimonials</h1>
-	<img src="media/food-pot.jpg" alt="Food Photo">
+	
+	<div class="story1">
+		<div class="img-container">
+		<img src="media/chef.webp" alt="Chef Photo">
+		</div>
+		<div class="story1-textwrap">
+		<h1>Our Story</h1>
+		<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - niêu. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from niêu is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
+		<a class="button" href="#">Discover the Clay Pot Collection</a>
+		</div>
+	</div>
+	
+	<img id="story-img" src="media/soup.jfif" alt="Soup Photo">
+	
+	<div class="story2">
+		<img src="media/dinner-table.jpg" alt="Dinner Table Photo">
+		<div class="story2-textwrap">
+		<p>Created in 2021 as a modern Vietnamese kitchen in Upstate New York, The Clay Pot Eatery and Bar guarantees to deliver the greatest that the cuisine has to offer. Everything that lands on your table has been handcrafted and approved by our team of talented chefs. Started as a group of friends that share the same passion for Vietnamese cuisine, we are ecstatic to serve you what has been named <strong>“The Best Vietnamese Food in Upstate New York”</strong>. </p>
+		<a class="button" href="#">Where To Find Us</a>
+		</div>
+	</div>
+	
+	<div class="source">
+		<img src="media/veggie.jpg" alt="Fresh Ingredients Photo">
+	  	<div class="source-textwrap">
+    		<h1>Our Source</h1>
+    		<p>While our menu will transfer you internationally, our ingredients are sourced locally right here in the tri-state area. We have come together with small businesses and farmers to serve you the freshest ingredients possible from the garden to your table. </p>
+		</div>
+	</div>
+	
+	<div class="testimonials">
+		<img src="media/food-pot.jpg" alt="Food Photo">
+		<div class="testimonial-textwrap">
+		<h1>Testimonials</h1>
+		<div class="testimonial-textbox">
+			<p>"This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again."</p>
+			<p class="testimonial-name">- John Doe</p>
+		</div>
+		<div class="testimonial-textbox">
+			<p>"Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes."</p>
+			<p class="testimonial-name">- Jane Doe</p>
+		</div>
+		<div class="testimonial-textbox">
+			<p>"Phenomenal experience. Top notch food, atmosphere, and wait staff. Have been here multiple times, and every time is an amazing experience all around. I always take my out of town guests here, as the food is always superb."</p>
+			<p class="testimonial-name">- Jim Doe</p>
+		</div>
+		<div class="testimonial-button">
+			<a class="button" href="mailto:hnguy016@plattsburgh.edu">Write Us a Review</a><br>
+			<a class="button" href="menu.html">View Our Full Menu</a>
+		</div>
+		</div>
+	</div>
 	
 </div>
 	
-
+<div class="footer">
+	<dl>
+	<dt>Location:</dt>
+		<dd>101 Broad Street</dd>
+		<dd>Plattsburgh, NY 12901</dd>
+	</dl>
+	<dl>
+	<dt>Operating Hours</dt>
+	<dt>Eatery Hours:</dt>
+		<dd>9AM-3PM</dd>
+		<dd>5PM-8PM</dd>
+	</dl>
+	<dl>
+	<dt>Bar Hours:</dt>
+		<dd>SUN-THU: 8PM-12AM</dd>
+		<dd>FRI-SAT: 8PM-2AM</dd>
+	</dl>
+	<div class="icon-group">
+	<img id="logo-footer" src="media/logo2.svg" alt="Logo">
+	<a href="tel:(+1)5186455349"><img class="icon" src ="photos/phone.png" alt="phone icon"></a>
+	<a href="mailto:hnguy016@plattsburgh.edu"><img class="icon" src ="photos/mail.png" alt="mail icon"></a><br>
+	</div>
+</div>
+	
+	
+	
 </body>
 </html>
