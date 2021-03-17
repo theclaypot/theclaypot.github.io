@@ -3,45 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Experience authentic Vietnamese cuisine in Upstate New York!">
+<meta name="keywords" content="Vietnamese, Food, Restaurant, Bar">
+<meta name="author" content="Jade Nguyen">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet" type="text/css">
 <title>About | The Clay Pot</title>
 </head>
 
 <body>
 	
-	<span onclick="openNav()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
-	
-<div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<a href="#">About</a>
-	<div class="menulink">
-	<a href="menu.html">Menu</a>
-		<div class="small-link">
-		<a href="">Eatery Menu</a>
-		<a href="">Bar Menu</a>
-		</div>
-	</div>
-	<img id="logo-nav" src="media/logo2.svg" alt="Logo">
-</div>
-
-<script>
-/* Set the width of the side navigation to 250px */
-function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-	
-<div class="video-container">
-	<video id="myVideo" autoplay muted>
-	  <source src="media/loading.mp4" type="video/mp4"/>
-	  Your browser does not support the video.
+<div id="video-container">
+	<video id="myVideo" autoplay muted preload>
+		<source src="media/loading.mp4" type="video/mp4"/>
+		Your browser does not support the video.
 	</video>
 </div>
+
 
 <script>
 var vid = document.getElementById("myVideo");
@@ -55,54 +34,93 @@ vid.onended=fadeout;
 		opacity = Number(window.getComputedStyle(vid).getPropertyValue("opacity")) 
             if(opacity>0){ 
 				opacity=opacity-0.1; 
-				vid.style.opacity=opacity 
+				vid.style.opacity=opacity;
+				document.getElementById("hide").style.display = 'block';				
             } 
             else{ 
                 clearInterval(intervalID);  
             } 
         }  
 </script>
+
+
+<div id="hide">
+
+	<span onclick="openNav()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">About</a>
+		<div class="menulink">
+		<a href="menu.html">Menu</a>
+			<div class="small-link">
+			<a href="">&#9658; &nbsp; Eatery Menu</a>
+			<a href="">&#9658; &nbsp; Bar Menu</a>
+			</div>
+		</div>
+		<img id="logo-nav" src="media/logo2.svg" alt="Logo">
+	</div>
+
+	<script>
+	/* Set the width of the side navigation to 250px */
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "450px";
+		document.getElementById("logo").style.animation = "fadeOut 0.3s forwards";
+		document.getElementById("overlay").style.display = "block";
+	}
+
+	/* Set the width of the side navigation to 0 */
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("logo").style.animation = "fadeIn 0.3s forwards";
+		document.getElementById("overlay").style.display = "none";
+	}
+	</script>
 	
 	
-<div class="header">
-	<img id="header-img" src="media/header.jpg" alt="Header Image">
-	<img id="logo" src="media/logo2.svg" alt="Clay Pot Logo">
+	<header>
+		<img id="header-img" src="media/header.jpg" alt="Header Image">
+		<img id="logo" src="media/logo2.svg" alt="Clay Pot Logo">
+	</header>
+
 </div>
+
+<div id="overlay"></div>
 	
-<div class="maincontent">
+<div id="maincontent">
 	
-	<div class="story1">
-		<div class="img-container">
+	<div id="story1">
+		<div id="img-container">
 		<img src="media/chef.webp" alt="Chef Photo">
 		</div>
-		<div class="story1-textwrap">
+		<div id="story1-textwrap">
 		<h1>Our Story</h1>
 		<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - niêu. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from niêu is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
 		<a class="button" href="#">Discover the Clay Pot Collection</a>
 		</div>
 	</div>
 	
-	<img id="story-img" src="media/soup.jfif" alt="Soup Photo">
-	
-	<div class="story2">
+	<!-- <img id="story-img" src="media/square.jpg" alt="Soup Photo"> -->
+	 
+	<div id="story2">
 		<img src="media/dinner-table.jpg" alt="Dinner Table Photo">
-		<div class="story2-textwrap">
+		<div id="story2-textwrap">
 		<p>Created in 2021 as a modern Vietnamese kitchen in Upstate New York, The Clay Pot Eatery and Bar guarantees to deliver the greatest that the cuisine has to offer. Everything that lands on your table has been handcrafted and approved by our team of talented chefs. Started as a group of friends that share the same passion for Vietnamese cuisine, we are ecstatic to serve you what has been named <strong>“The Best Vietnamese Food in Upstate New York”</strong>. </p>
 		<a class="button" href="#">Where To Find Us</a>
 		</div>
 	</div>
 	
-	<div class="source">
+	<div id="source">
 		<img src="media/veggie.jpg" alt="Fresh Ingredients Photo">
-	  	<div class="source-textwrap">
+	  	<div id="source-textwrap">
     		<h1>Our Source</h1>
     		<p>While our menu will transfer you internationally, our ingredients are sourced locally right here in the tri-state area. We have come together with small businesses and farmers to serve you the freshest ingredients possible from the garden to your table. </p>
 		</div>
 	</div>
 	
-	<div class="testimonials">
+	<div id="testimonials">
 		<img src="media/food-pot.jpg" alt="Food Photo">
-		<div class="testimonial-textwrap">
+		<div id="testimonial-textwrap">
 		<h1>Testimonials</h1>
 		<div class="testimonial-textbox">
 			<p>"This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again."</p>
@@ -116,7 +134,7 @@ vid.onended=fadeout;
 			<p>"Phenomenal experience. Top notch food, atmosphere, and wait staff. Have been here multiple times, and every time is an amazing experience all around. I always take my out of town guests here, as the food is always superb."</p>
 			<p class="testimonial-name">- Jim Doe</p>
 		</div>
-		<div class="testimonial-button">
+		<div id="testimonial-button">
 			<a class="button" href="mailto:hnguy016@plattsburgh.edu">Write Us a Review</a><br>
 			<a class="button" href="menu.html">View Our Full Menu</a>
 		</div>
@@ -125,29 +143,41 @@ vid.onended=fadeout;
 	
 </div>
 	
-<div class="footer">
-	<dl>
-	<dt>Location:</dt>
-		<dd>101 Broad Street</dd>
-		<dd>Plattsburgh, NY 12901</dd>
-	</dl>
-	<dl>
-	<dt>Operating Hours</dt>
-	<dt>Eatery Hours:</dt>
-		<dd>9AM-3PM</dd>
-		<dd>5PM-8PM</dd>
-	</dl>
-	<dl>
-	<dt>Bar Hours:</dt>
-		<dd>SUN-THU: 8PM-12AM</dd>
-		<dd>FRI-SAT: 8PM-2AM</dd>
-	</dl>
-	<div class="icon-group">
-	<img id="logo-footer" src="media/logo2.svg" alt="Logo">
-	<a href="tel:(+1)5186455349"><img class="icon" src ="photos/phone.png" alt="phone icon"></a>
-	<a href="mailto:hnguy016@plattsburgh.edu"><img class="icon" src ="photos/mail.png" alt="mail icon"></a><br>
+	
+	
+<footer>
+	<div id="footer-left">
+			<ul>
+			<li class="footer-h1">Location:</li>
+				<li class="footer-details">101 Broad Street</li>
+				<li class="footer-details">Plattsburgh, NY 12901</li>
+			</ul>
+			<ul>
+			<li class="footer-h1">Operating Hours:</li>
+			<div id="hours">
+				<div class="small-hours">
+				<li class="footer-h1">Eatery Hours:</li>
+					<li class="footer-details">9AM-3PM</li>
+					<li class="footer-details">5PM-8PM</li>
+				</div>
+				<div class="small-hours">
+				<li class="footer-h1">Bar Hours:</li>
+					<li class="footer-details">SUN-THU: 8PM-12AM</li>
+					<li class="footer-details">FRI-SAT: 8PM-2AM</li>
+				</div>
+			</div>
+			</ul>
 	</div>
-</div>
+	<div id="footer-right">
+		<img id="logo-footer" src="media/logo2.svg" alt="Logo">
+		<div id="icon-group">
+			<a href="tel:(+1)5186455349"><img class="icon" src ="media/phone.svg" alt="phone svg"></a>
+			<a href="mailto:hnguy016@plattsburgh.edu"><img class="icon" src ="media/mail.svg" alt="mail icon"></a>
+			<a href=><img class="icon" src ="media/instagram.svg" alt="instagram icon"></a>
+			<a href=><img class="icon" src ="media/facebook.svg" alt="facebook icon"></a>
+		</div>
+	</div>
+</footer>
 	
 	
 	
