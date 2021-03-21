@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Experience authentic Vietnamese cuisine in Upstate New York!">
+<meta name="keywords" content="Vietnamese, Food, Restaurant, Bar">
+<meta name="author" content="Jade Nguyen">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="aos.css" rel="stylesheet" type="text/css">
+<title>Menu | The Clay Pot</title>
+</head>
+
+<body>
+	
+<span onclick="openNav()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">About</a>
+		<div class="menulink">
+		<a href="menu.html">Menu</a>
+			<div class="small-link">
+			<a href="">&#9658; &nbsp; Eatery Menu</a>
+			<a href="">&#9658; &nbsp; Bar Menu</a>
+			</div>
+		</div>
+		<img id="logo-nav" src="media/logo2.svg" alt="Logo">
+	</div>
+	
+	<script>
+	/* Set the width of the side navigation to 250px */
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "450px";
+		document.getElementById("logo").style.animation = "fadeOut 0.3s forwards";
+		document.getElementById("overlay").style.display = "block";
+	}
+
+	/* Set the width of the side navigation to 0 */
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("logo").style.animation = "fadeIn 0.3s forwards";
+		document.getElementById("overlay").style.display = "none";
+	}
+	</script>
+	
+	
+	
+	
+<footer>
+	<div id="footer-left">
+			<ul>
+			<li class="footer-h1">Location:</li>
+				<li class="footer-details">101 Broad Street</li>
+				<li class="footer-details">Plattsburgh, NY 12901</li>
+			</ul>
+			<ul>
+			<li class="footer-h1">Operating Hours:</li>
+			<div id="hours">
+				<div class="small-hours">
+				<li class="footer-h1">Eatery Hours:</li>
+					<li class="footer-details">9AM-3PM</li>
+					<li class="footer-details">5PM-8PM</li>
+				</div>
+				<div class="small-hours">
+				<li class="footer-h1">Bar Hours:</li>
+					<li class="footer-details">SUN-THU: 8PM-12AM</li>
+					<li class="footer-details">FRI-SAT: 8PM-2AM</li>
+				</div>
+			</div>
+			</ul>
+	</div>
+	<div id="footer-right">
+		<img id="logo-footer" src="media/logo2.svg" alt="Logo">
+		<div id="icon-group">
+			<a href="tel:(+1)5186455349"><img class="icon" src ="media/phone.svg" alt="phone svg"></a>
+			<a href="mailto:hnguy016@plattsburgh.edu"><img class="icon" src ="media/mail.svg" alt="mail icon"></a>
+			<a href=><img class="icon" src ="media/instagram.svg" alt="instagram icon"></a>
+			<a href=><img class="icon" src ="media/facebook.svg" alt="facebook icon"></a>
+		</div>
+	</div>
+</footer>	
+
+</body>
+</html>

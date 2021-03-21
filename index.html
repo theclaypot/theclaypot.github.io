@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet" type="text/css">
+<link href="aos.css" rel="stylesheet" type="text/css">
 <title>About | The Clay Pot</title>
 </head>
 
@@ -35,7 +36,9 @@ vid.onended=fadeout;
             if(opacity>0){ 
 				opacity=opacity-0.1; 
 				vid.style.opacity=opacity;
-				document.getElementById("hide").style.display = 'block';				
+				document.getElementById("slideIn-button").style.animation = "fadeIn 0.3s 2s forwards";
+				document.getElementById("hide").style.display="block";
+				document.getElementById("appear").style.opacity = '1';
             } 
             else{ 
                 clearInterval(intervalID);  
@@ -50,7 +53,7 @@ vid.onended=fadeout;
 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
+		<a href="index.html">About</a>
 		<div class="menulink">
 		<a href="menu.html">Menu</a>
 			<div class="small-link">
@@ -61,6 +64,7 @@ vid.onended=fadeout;
 		<img id="logo-nav" src="media/logo2.svg" alt="Logo">
 	</div>
 
+	
 	<script>
 	/* Set the width of the side navigation to 250px */
 	function openNav() {
@@ -77,34 +81,54 @@ vid.onended=fadeout;
 	}
 	</script>
 	
-	
+	<script>
+		function slideIn() {
+			document.getElementById("logo").style.animation ="fadeOut 0.3s forwards";
+			document.getElementById("story1").style.animation = "slideIn 1.5s forwards";
+			document.getElementById("menu-icon").style.filter= "invert(1) saturate(0)";
+			document.getElementById("slideOut-button").style.animation = "fadeIn 1.5s 5s forwards";
+			document.getElementById("scrolldown-memo").style.animation = "fadeIn 1.5s 5s forwards";
+		}
+		function slideOut() {
+			document.getElementById("story1").style.animation = "slideOut 3.5s forwards";
+			document.getElementById("slideOut-button").style.animation = "slideOut 3.5s forwards";
+			document.getElementById("logo").style.animation ="fadeIn 0.3s forwards";
+			document.getElementById("menu-icon").style.filter="none";
+			
+		}
+	</script>
+	<button id="slideIn-button" onClick="slideIn()">&#187;</button>
 	<header>
 		<img id="header-img" src="media/header.jpg" alt="Header Image">
 		<img id="logo" src="media/logo2.svg" alt="Clay Pot Logo">
+		
 	</header>
 
+	
 </div>
+	
+<button id="slideOut-button" onClick="slideOut()">&#171;</button>
 
 <div id="overlay"></div>
-	
-<div id="maincontent">
 	
 	<div id="story1">
 		<div id="img-container">
 		<img src="media/chef.webp" alt="Chef Photo">
 		</div>
-		<div id="story1-textwrap">
+		<div id="story1-textwrap" data-aos="fade-right" data-aos-easing="ease-out-cubic">
 		<h1>Our Story</h1>
-		<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - niêu. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from niêu is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
+		<p>Our restaurant is named after the clay pot that is traditionally used to make rice in Vietnam - <em>niêu</em>. Rice is a crucial element in Vietnamese cuisine, and the rice that is made from <em>niêu</em> is fluffy, steamy with a layer of crispy goodness at the bottom. </p>
 		<a class="button" href="#">Discover the Clay Pot Collection</a>
+			<p id="scrolldown-memo"><small><em>**scroll down to proceed</em></small></p>
 		</div>
 	</div>
+
+		
+<div id="maincontent">
 	
-	<!-- <img id="story-img" src="media/square.jpg" alt="Soup Photo"> -->
-	 
 	<div id="story2">
-		<img src="media/dinner-table.jpg" alt="Dinner Table Photo">
-		<div id="story2-textwrap">
+		<img id="appear" src="media/dinner-table.jpg" alt="Dinner Table Photo">
+		<div id="story2-textwrap" data-aos="fade-left" data-aos-easing="ease-out-cubic">
 		<p>Created in 2021 as a modern Vietnamese kitchen in Upstate New York, The Clay Pot Eatery and Bar guarantees to deliver the greatest that the cuisine has to offer. Everything that lands on your table has been handcrafted and approved by our team of talented chefs. Started as a group of friends that share the same passion for Vietnamese cuisine, we are ecstatic to serve you what has been named <strong>“The Best Vietnamese Food in Upstate New York”</strong>. </p>
 		<a class="button" href="#">Where To Find Us</a>
 		</div>
@@ -112,7 +136,7 @@ vid.onended=fadeout;
 	
 	<div id="source">
 		<img src="media/veggie.jpg" alt="Fresh Ingredients Photo">
-	  	<div id="source-textwrap">
+	  	<div id="source-textwrap" data-aos="fade-right" data-aos-easing="ease-out-cubic">
     		<h1>Our Source</h1>
     		<p>While our menu will transfer you internationally, our ingredients are sourced locally right here in the tri-state area. We have come together with small businesses and farmers to serve you the freshest ingredients possible from the garden to your table. </p>
 		</div>
@@ -120,7 +144,7 @@ vid.onended=fadeout;
 	
 	<div id="testimonials">
 		<img src="media/food-pot.jpg" alt="Food Photo">
-		<div id="testimonial-textwrap">
+		<div id="testimonial-textwrap" data-aos="fade-left" data-aos-easing="ease-out-cubic">
 		<h1>Testimonials</h1>
 		<div class="testimonial-textbox">
 			<p>"This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again."</p>
@@ -178,8 +202,13 @@ vid.onended=fadeout;
 		</div>
 	</div>
 </footer>
+
 	
-	
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="aos.js"></script>
+<script type="text/javascript">
+	AOS.init();
+</script>
 	
 </body>
 </html>
