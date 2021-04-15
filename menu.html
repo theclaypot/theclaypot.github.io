@@ -15,22 +15,32 @@
 
 <body>
 	
-<span onclick="openNav()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
+	<span style="cursor: pointer" onclick="openNav2()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
 
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+		<div id="indent">
 		<a href="index.html">About</a>
-		<div class="menulink">
 		<a href="menu.html">Menu</a>
-			<div class="small-link">
-			<a href="">&#9658; &nbsp; Eatery Menu</a>
-			<a href="">&#9658; &nbsp; Bar Menu</a>
-			</div>
 		</div>
 		<img id="logo-nav" src="media/logo2.svg" alt="Logo">
 	</div>
 	
-	<script>
+<script>
+	/* Set the width of the side navigation to 250px */
+	function openNav2() {
+		document.getElementById("mySidenav").style.width = "450px";
+		document.getElementById("overlay").style.display = "block";
+	}
+
+	/* Set the width of the side navigation to 0 */
+	function closeNav2() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("overlay").style.display = "none";
+	}
+	</script>
+	
+<script>
 	/* Set the width of the side navigation to 250px */
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "450px";
@@ -46,8 +56,270 @@
 	}
 	</script>
 	
+
+<div id="overlay"></div>
+
+	
+<header id="menu-header">
+	<div id="menu-img-container">
+		<img id="menu-header-img" src="media/menu.jpg" alt="Menu Header Image">
+	</div>
+	<div id="header-textwrap">
+		<h1>Our Menu</h1>
+		<p> Despite the varied landscape of Vietnam, all of the cuisine contains this brilliant balance of aromatics, heat, sweetness, sourness, and fish-sauciness. As with other Asian cuisines, it's all about the yin and yang; the sweet and the salty, the cooling and the warming, the fresh and the fermented.</p>
+		<p> Need a party platter? Don't hesitate to <a href="mailto:hnguy016@plattsburgh.edu">contact us</a> on any special request! </p>
+		<div class="tab">
+			<button class="tablinks" onclick="openMenu(event, 'Eatery')" id="defaultOpen">Eatery Menu</button>
+			<button class="tablinks" onclick="openMenu(event, 'Bar')">Bar Menu </button>
+		</div>
+	</div>
+</header>
+	
+
+<div id="menu-wrap"> 
+	<div id="Eatery" class="tabcontent">
+		<div class="col1">
+			<div class="single-menu">
+			<h2>Specials</h2>
+				<dl>
+					<dt>The Village Platter</dt>
+					<dd>crispy grilled pork, grilled shrimp, grilled beef skewers, 	served with pandan bamboo rice</dd>
+				</dl>
+				<dl>
+					<dt>The Lunar New Year Platter</dt>
+					<dd>sticky rice cake with pork and mung bean filling, Chinese sausage and crunchy pickled radish and scallion heads</dd>
+				</dl>
+			</div>
+			<div class="single-menu">
+			<h2>Entree</h2>
+				<dl>
+					<dt>Pho Bo (Beef Rice Noodle)</dt>
+					<dd>choice of rare steak/tendon/combination with tripes</dd>
+				</dl>
+				<dl>
+					<dt>Pho Ga (Chicken Rice Noodle)</dt>
+					<dd>choice of soup or stir-fry</dd>
+				</dl>
+				<dl>
+					<dt>Bun Bo Hue (Spicy Beef Noodle)</dt>
+					<dd>Hue Province’s specialty, served with sliced beef, Hue special pepper ham, spicy broth of lemongrass and red chillie flakes</dd>
+				</dl>
+				<dl>
+					<dt>Bun Thit Nuong (Grilled Pork Noodle)</dt>
+					<dd>Southern Vietnam’s specialty, served with grilled pork chop, crispy egg rolls, pork skewers, peanuts, sweet and sour fish sauce and a bed of fresh veggie</dd>
+				</dl>
+				<dl>
+					<dt>Com Tam (Vietnamese Broken Rice)</dt>
+					<dd>choice of pork chop/shredded pork skin/meatloaf/combination</dd>
+				</dl>
+				<dl>
+					<dt>Hainan Chicken</dt>
+					<dd>rice cooked in chicken broth, seared chicken thighs and ginger fish sauce</dd>
+				</dl>
+				<dl>
+					<dt>Fried Rice</dt>
+					<dd>served with mushroom, pepper, onion, choice of shrimp/beef/pork/chicken/tofu</dd>
+				</dl>
+		</div>
+			<div class="single-menu">
+			<h2>Dessert and Beverage</h2>
+				<dl>
+					<dt>Che Bap (Sweet Corn Pudding)</dt>
+				</dl>
+				<dl>
+					<dt>Tao Pho (Sweet Silken Tofu)</dt>
+				</dl>
+				<dl>
+					<dt>Grass Jelly</dt>
+				</dl>
+				<dl>
+					<dt>Panna Cotta (Lychee/Mango/Durian)</dt>
+				</dl>
+				<dl>
+					<dt>Vietnamese Coffee</dt>
+				</dl>
+				<dl>
+					<dt>Tea (Jasmine/Herbal)</dt>
+				</dl>
+				<dl>
+					<dt>Lime Soda</dt>
+				</dl>
+				<dl>
+					<dt>Sugarcane Juice</dt>
+				</dl>
+				<dl>
+					<dt>Orange Juice</dt>
+				</dl>
+				<dl>
+					<dt>Soft Drinks</dt>
+				</dl>
+		</div>
+		</div>
+		<div class="col2">
+		<div class="single-menu">
+			<h2>Appetizer</h2>
+				<dl>
+					<dt>Egg Roll (4)</dt>
+					<dd>choice of shrimp/chicken/veggie</dd>
+				</dl>
+				<dl>
+					<dt>Crispy Tofu</dt>
+					<dd>served with peanuts and scallion oil</dd>
+				</dl>
+				<dl>
+					<dt>Summer Roll (4)</dt>
+					<dd>choice of shrimp and pork/grilled pork/ crispy tofu</dd>
+				</dl>
+				<dl>
+					<dt>Lotus Salad</dt>
+					<dd>choice of shrimp and pork/ crispy tofu</dd>
+				</dl>
+				<dl>
+					<dt>Mango Salad</dt>
+					<dd>choice of shrimp and pork/ crispy tofu</dd>
+				</dl>
+				<dl>
+					<dt>Chicken Wings (6)</dt>
+					<dd>choice of garlic butter/fish sauce</dd>
+				</dl>
+				<dl>
+					<dt>Fried Wonton (6)</dt>
+					<dd>choice of shrimp/chicken/veggie</dd>
+				</dl>
+				<dl>
+					<dt>Crispy Rice Paper Pizza</dt>
+					<dd>served with quail eggs and sausage</dd>
+				</dl>
+		</div>
+		<div class="single-menu">
+			<h2>The Clay Pot Collection</h2>
+				<dl>
+					<dt>Braised Pork Belly</dt>
+					<dd>charred, smoky pork slow-cooked in a rich, deep caramelized fish sauce</dd>
+				</dl>
+				<dl>
+					<dt>Braised Fish</dt>
+					<dd>charred, smoky catfish/mackerel (seasonal) slow-cooked in a rich, deep caramelized fish sauce</dd>
+				</dl>
+				<dl>
+					<dt>Braised Mushroom</dt>
+					<dd>king mushroom, oyster mushroom braised in sweet soy sauce</dd>
+				</dl>
+				<dl>
+					<dt>Veggie Stir-fry</dt>
+					<dd>carrot, mushroom, baby corn, baby bok-choy and water chestnut stir-fry in sweet soy sauce and peanut sauce</dd>
+				</dl>
+				<dl>
+					<dt>Grilled Shrimp</dt>
+					<dd>shrimp skewers marinated in garlic butter or spicy lemongrass chilllie, grilled on open fire</dd>
+				</dl>
+				<dl>
+					<dt>Seafood Medley</dt>
+					<dd>steamed baby squid, shrimp, tilapia and snow crab, served with spicy lime sauce or garlic butter sauce</dd>
+				</dl>
+				<dl>
+					<dt>Steamed Veggie Add-on</dt>
+					<dd>fresh carrot, baby bok-choy, mushroom</dd>
+				</dl>
+				<dl>
+					<dt>Family Deal</dt>
+					<dd>choice of two dishes above, three servings of clay pot rice, plus a serving of steamed fresh veggie</dd>
+					<dd>**serves 4</dd>
+				</dl>
+		</div>
+		</div>
+		</div>
+	
+<script>
+function openMenu(evt, menuName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+	document.getElementById("defaultOpen").click();
+</script>
+
+	<div id="Bar" class="tabcontent">
+		<div id="cocktails">
+			<h2>Cocktails</h2>
+			<div class="single-cocktail">
+				<img src="media/rose.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Rose Apple Reviver</h3>
+				<p>rose apple liqueur, Sauvignon Blanc Hendrick’s Gin, lemon juice, cucumber, soda top-up</p>
+			</div>
+			<div class="single-cocktail" style="margin-left: 1vw; margin-right: 1vw;">
+				<img src="media/emotions.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Emotions</h3>
+				<p>white rum, white ginseng liqueur, lemongrass, basil, passion fruit, lime</p>
+			</div>
+			<div class="single-cocktail">
+				<img src="media/tonkin.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Tonkin Margarita</h3>
+				<p>red plum liqueur, blanco tequila, guava juice, ginger ale, lime</p>
+			</div>
+			<div class="single-cocktail">
+				<img src="media/coastal.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Coastal Cooler</h3>
+				<p>Bach Sam liqueur, passion fruit juice, lime, ripe mango, peppermint leaves</p>
+			</div>
+			<div class="single-cocktail" style="margin-left: 1vw; margin-right: 1vw;">
+				<img src="media/monsoon.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Monsoon Martini</h3>
+				<p>Bach Sam liqueur, Martini Bianco, smoked lemon peel</p>
+			</div>
+			<div class="single-cocktail">
+				<img src="media/paradise.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Paradise Punch</h3>
+				<p>Mo Vang liqueur, bourbon, pineapple juive, lime, grenadine, Angostura</p>
+			</div>
+			<div class="single-cocktail">
+				<img src="media/spiced.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Spiced Delight</h3>
+				<p>purple rice liqueur, Bailey’s, ginger juice, brown suger syrup, coconut milk</p>
+			</div>
+			<div class="single-cocktail" style="margin-left: 1vw; margin-right: 1vw;">
+				<img src="media/lychee.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Lychee Cocktail</h3>
+				<p>Phu Loc liqueur, egg white, cranberry juice, lychee liqueur, pineapple syrup, a pinch of crushed pepper</p>
+			</div>
+			<div class="single-cocktail">
+				<img src="media/highway.jpg" alt="Cocktail Img" style="width:100%">
+				<h3>Highway Old Fashioned</h3>
+				<p>Sa Pa liqueur, red plum liqueur, VSOP cognac, orange peel, brown suger syrup, dash of Angostura</p>
+			</div>
+		</div>
+	</div>
+</div>	
 	
 	
+	
+
+	
+
+	
+	<a class="menu-button button" href="javascript:void(0)" onclick="openmodal()">Make a reservation</a><br>
+	<a class="menu-button button" href="javascript:void(0)" onclick="openmodal()"> Place an Online Order</a>
+	
+	<script>
+		function openmodal() {document.getElementById("myModal").style.display = "block";}
+		function closemodal() {document.getElementById("myModal").style.display = "none";}
+	</script>
+	
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<a href="javascript:void(0)" class="menu-closebtn closebtn" onclick="closemodal()">&times;</a>
+			<p>We appreciate your interest in The Clay Pot Eatery and Bar. We are a fictional restaurant created by Jade Nguyen. Should you have any questions, please <a href="mailto:hnguy016@plattsburgh.edu">contact me</a>.</p>
+			<a id="return" class="button" href="index.html">Return to Home</a>
+		</div>
+	</div>
 	
 <footer>
 	<div id="footer-left">
