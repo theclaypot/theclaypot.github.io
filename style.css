@@ -242,7 +242,7 @@ header {
 
 body {
     font-family: Avenir, "Century Gothic", Futura, Avenir, Helvetica, sans-serif;
-    font-size: 100%;
+    font-size: 120%;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -258,7 +258,7 @@ body::-webkit-scrollbar {
 
 h1 {
 	font-family: 'Playfair Display', serif;
-	font-size: 3em;
+	font-size: 5em;
 }
 
 #story1 {
@@ -553,7 +553,7 @@ footer li {
 }
 
 #header-textwrap h1 {
-	font-size: 7em;
+	font-size: 6em;
 	color: #ffe7ad;
 	display: block;
 	margin: auto;
