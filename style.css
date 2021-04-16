@@ -242,7 +242,7 @@ header {
 
 body {
     font-family: Avenir, "Century Gothic", Futura, Avenir, Helvetica, sans-serif;
-    font-size: 120%;
+    font-size: 100%;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -332,7 +332,7 @@ h1 {
 #source-textwrap {
     position: relative;
     top: -21vh;
-    width: 50%;
+    width: 45%;
     display: block;
     float: left;
 }
