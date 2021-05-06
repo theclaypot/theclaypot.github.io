@@ -13,7 +13,7 @@
 <title>Menu | The Clay Pot</title>
 </head>
 
-<body>
+<body id="menu">
 	
 	<span style="cursor: pointer" onclick="openNav2()"><img id="menu-icon" src="media/menu.svg" alt="Menu Icon"></span>
 
@@ -24,7 +24,7 @@
 		<a href="menu.html">Menu</a>
 		</div>
 		<img id="logo-nav" src="media/logo2.svg" alt="Logo">
-	</div>
+</div>
 	
 <script>
 	/* Set the width of the side navigation to 250px */
@@ -78,6 +78,7 @@
 
 <div id="menu-wrap"> 
 	<div id="Eatery" class="tabcontent">
+		<div class="col-layout">
 		<div class="col1">
 			<div class="single-menu">
 			<h2>Specials</h2>
@@ -156,7 +157,7 @@
 		</div>
 		</div>
 		<div class="col2">
-		<div class="single-menu">
+			<div class="single-menu">
 			<h2>Appetizer</h2>
 				<dl>
 					<dt>Egg Roll (4)</dt>
@@ -191,7 +192,7 @@
 					<dd>served with quail eggs and sausage</dd>
 				</dl>
 		</div>
-		<div class="single-menu">
+			<div class="single-menu">
 			<h2>The Clay Pot Collection</h2>
 				<dl>
 					<dt>Braised Pork Belly</dt>
@@ -229,6 +230,7 @@
 		</div>
 		</div>
 		</div>
+	</div>
 
 <script>
 function openMenu(evt, menuName) {
@@ -296,6 +298,8 @@ function openMenu(evt, menuName) {
 				<p>Sa Pa liqueur, red plum liqueur, VSOP cognac, orange peel, brown sugar syrup, dash of Angostura</p>
 			</div>
 		</div>
+		
+		<div class="col-layout">
 		<div class="col1">
 			<div class="single-menu">
 			<h2>On the Rocks</h2>
@@ -348,8 +352,12 @@ function openMenu(evt, menuName) {
 				</dl>
 			</div>
 		</div>
+		</div>
+			
+		</div>
 	</div>	
 </div>
+	
 	<a class="menu-button button" href="javascript:void(0)" onclick="openmodal()">Make a reservation</a><br>
 	<a class="menu-button button" href="javascript:void(0)" onclick="openmodal()"> Place an Online Order</a>
 	
