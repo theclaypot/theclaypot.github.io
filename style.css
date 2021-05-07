@@ -621,11 +621,11 @@ footer li {
 }
 
 #menu-wrap h2 {
+	background: no-repeat center/110% url("media/h2-background.jpg");
 	text-transform: uppercase;
 	text-align: center;
 	display: block;
 	color: #ffe7ad;
-	background: black;
 	top: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -663,7 +663,7 @@ footer li {
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	height: 200vh;
+	height: 180vh;
 }
 
 .single-cocktail {
@@ -671,7 +671,7 @@ footer li {
 	padding: 2vw;
 	padding-bottom: 3vw;
 	margin-bottom: 1vw;
-	height: 60vh;
+	height: 55vh;
 	float: left;
 	background: black;
 	color: #ffe7ad;
@@ -744,7 +744,7 @@ footer li {
 	}
 	
 	#cocktails {
-		height: 120vh;
+		height: auto;
 	}
 	
 	#story1 {
@@ -879,7 +879,7 @@ footer li {
 	
 	#cocktails {
 		width: 80vw;
-		height: 640vh;
+		height: auto;
 	}
 	
 	#cocktails h2 {
@@ -894,7 +894,7 @@ footer li {
 	.single-cocktail {
 		float: none;
 		width: 76vw;
-		height: 65vh;
+		height: auto;
 		margin-left: 0 !important; 
 		margin-right: 0 !important;
 		margin-bottom: 1vh;
